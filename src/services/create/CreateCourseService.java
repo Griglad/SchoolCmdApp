@@ -3,10 +3,10 @@ package services.create;
 import dao.SchoolDao;
 import dao.SchoolDaoImpl;
 import model.Course;
+import model.Stream;
+import model.Type;
 import utilities.*;
-
 import java.time.LocalDate;
-
 import java.util.*;
 import java.util.stream.Collectors;
 

@@ -12,7 +12,7 @@ public class DisplayStudentsEnrolledInMoreThanOneCourseService {
     public void display(Platform platform) {
         if (!findStudentsEnrolledInMoreThanOneCourseService.findEnrolledStudentsInMoreThanOneCourse(platform).isEmpty()) {
             System.out.println("--------STUDENTS ENROLLED IN MORE THAN ONE COURSE-------");
-            findStudentsEnrolledInMoreThanOneCourseService.getStundentsInMoreThanOneCourse()
+            findStudentsEnrolledInMoreThanOneCourseService.getStudentsInMoreThanOneCourse()
                     .forEach(student ->
                             System.out.println(student.getFirstName().toUpperCase() + " " + student.getLastName().toUpperCase()));
         } else {

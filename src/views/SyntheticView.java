@@ -1,19 +1,17 @@
 package views;
 
 import services.display.*;
+import services.menu.UsersMenuService;
 import utilities.Platform;
 import utilities.Input;
 import utilities.InputValidator;
 import utilities.Style;
-
-import java.time.LocalDate;
 import java.util.Scanner;
 
 //Singleton class
 public class SyntheticView {
 
     private static SyntheticView syntheticView;
-    private static final MainMenu mainMenu = MainMenu.getInstance();
     private final DisplayStudentsService displayStudentsService = new DisplayStudentsService();
     private final DisplayTrainersService displayTrainersService = new DisplayTrainersService();
     private final DisplayCoursesService displayCoursesService = new DisplayCoursesService();
@@ -40,7 +38,7 @@ public class SyntheticView {
 
         while (true) {
             int result;
-            System.out.println("PLEASE SELECT ONE BELOW");
+            System.out.println("PLEASE SELECT ONE OF THE FOLLOWING");
             System.out.println(("1") + " -  STUDENTS");
             System.out.println(("2") + " -  TRAINERS");
             System.out.println(("3") + " -  COURSES");
@@ -108,7 +106,7 @@ public class SyntheticView {
                     Style.blank();
                 }
                 case 11 -> {
-                    mainMenu.showMenu();
+                    UsersMenuService.getInstance();
                     Style.blank();
                 }
 

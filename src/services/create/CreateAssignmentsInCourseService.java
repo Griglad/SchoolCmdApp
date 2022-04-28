@@ -6,7 +6,6 @@ import model.Assignment;
 import model.AssignmentsInCourse;
 import model.Course;
 import utilities.*;
-
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;

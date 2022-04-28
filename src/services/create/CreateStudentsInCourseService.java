@@ -8,7 +8,6 @@ import model.StudentsInCourse;
 import utilities.Input;
 import utilities.InputValidator;
 import utilities.Platform;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;

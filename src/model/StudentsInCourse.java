@@ -9,7 +9,7 @@ public class StudentsInCourse {
 
     private Course course;
     private List<Student> students = new ArrayList<>();
-    private static volatile int count;
+    private static int count;
 
     public StudentsInCourse() {
 

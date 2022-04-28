@@ -9,7 +9,7 @@ public class AssignmentsInStudent {
 
     private Student student;
     private List<Assignment> assignments = new ArrayList<>();
-    private static volatile int count;
+    private static int count;
 
     public AssignmentsInStudent() {
 

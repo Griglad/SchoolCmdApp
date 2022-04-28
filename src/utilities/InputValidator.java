@@ -1,5 +1,8 @@
 package utilities;
 
+import model.Stream;
+import model.Subject;
+import model.Type;
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

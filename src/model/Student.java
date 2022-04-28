@@ -9,7 +9,7 @@ public class Student {
     private String lastName;
     private LocalDate dateOfBirth;
     private String tuitionFees;
-    private static volatile int count;
+    private static int count;
 
     public Student(String afm, String firstName, String lastName, LocalDate dateOfBirth, String tuitionFees) {
         this.afm = afm;

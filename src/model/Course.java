@@ -1,8 +1,5 @@
 package model;
 
-import utilities.Stream;
-import utilities.Type;
-
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -14,7 +11,7 @@ public class Course {
     private List<Type> types;
     private LocalDate start_date;
     private LocalDate end_date;
-    private static volatile int count;
+    private static int count;
 
     public Course() {
 

@@ -10,7 +10,7 @@ public class AssignmentsInCourse {
 
     private Course course;
     private List<Assignment> assignments = new ArrayList<>();
-    private static volatile int count;
+    private static int count;
 
     public AssignmentsInCourse() {
 

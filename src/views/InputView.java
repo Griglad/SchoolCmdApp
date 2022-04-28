@@ -1,6 +1,7 @@
 package views;
 
 import services.display.*;
+import services.menu.UsersMenuService;
 import utilities.Input;
 import utilities.InputValidator;
 import utilities.Platform;
@@ -12,7 +13,6 @@ import java.util.Scanner;
 public class InputView {
 
     private static InputView inputView;
-    private static final MainMenu mainMenu = MainMenu.getInstance();
     private final Scanner input = Input.getInstance();
     private final DisplayStudentsService displayStudentsService = new DisplayStudentsService();
     private final DisplayCoursesService displayCoursesService = new DisplayCoursesService();
@@ -42,7 +42,7 @@ public class InputView {
 
         while (true) {
             int result;
-            System.out.println("PLEASE SELECT ONE BELOW");
+            System.out.println("PLEASE SELECT ONE OF THE FOLLOWING");
 
             System.out.println(("1") + " -  STUDENTS");
             System.out.println(("2") + " -  TRAINERS");
@@ -103,7 +103,7 @@ public class InputView {
                     Style.blank();
                 }
                 case 11 -> {
-                    mainMenu.showMenu();
+                    UsersMenuService.getInstance();
                     Style.blank();
                 }
                 case 12 -> {

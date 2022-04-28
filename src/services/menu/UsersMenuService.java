@@ -1,32 +1,35 @@
-package views;
+
+package services.menu;
 
 import services.create.CreateAllDataService;
 import utilities.Input;
 import utilities.InputValidator;
 import utilities.Style;
-
+import views.InputView;
+import views.SyntheticView;
 import java.util.Scanner;
 
-//Singleton Class
-public class MainMenu {
+public class UsersMenuService {
 
-    private static MainMenu instance;
-    private static final InputView inputView = InputView.getInstance();
-    private static final SyntheticView syntheticView = SyntheticView.getInstance();
-    private static final Scanner input = Input.getInstance();
+
+    private static UsersMenuService instance;
+    private final InputView inputView = InputView.getInstance();
+    private final SyntheticView syntheticView = SyntheticView.getInstance();
+    private final Scanner input = Input.getInstance();
     private final CreateAllDataService createAllDataService = new CreateAllDataService();
 
 
-    private MainMenu() {
+    private UsersMenuService() {
 
     }
 
 
-    public static MainMenu getInstance() {
+    public static UsersMenuService getInstance() {
         if (instance == null) {
-            synchronized (MainMenu.class) {
+            synchronized (UsersMenuService.class) {
                 if (instance == null) {
-                    instance = new MainMenu();
+                    instance = new UsersMenuService();
+                    instance.showMenu();
                 }
             }
         }
@@ -51,7 +54,7 @@ public class MainMenu {
 
 
         while (true) {
-            System.out.println("PLEASE WRITE THE RIGHT NUMBER");
+            System.out.println("PLEASE PROVIDE THE RIGHT NUMBER");
             System.out.println(("1") + " - DISPLAY DATA IN TESTING MODE");
             System.out.println(("2") + " - CONTINUE TO CREATE YOUR DATA");
             System.out.println(("3") + " - DISPLAY YOUR ADDED DATA");
@@ -74,5 +77,7 @@ public class MainMenu {
                 default -> inputView.showMenu();
             }
         }
+
     }
+
 }

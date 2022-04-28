@@ -11,7 +11,7 @@ public class Assignment {
     private LocalDate subDateTime;
     private String oralMark;
     private String totalMark;
-    private static volatile int count;
+    private static int count;
 
     public Assignment(String title, String description, LocalDate subDateTime, String oralMark, String totalMark) {
         this.title = title;
@@ -77,7 +77,7 @@ public class Assignment {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder();
-        sb.append(++count + "-");
+        sb.append(++count+ "-");
         sb.append("THE TITLE IS:").append(title.toUpperCase());
         sb.append(",THE DESCRIPTION IS:").append(description.toUpperCase());
         sb.append(",THE SUBMISSION DATE IS:").append(subDateTime);

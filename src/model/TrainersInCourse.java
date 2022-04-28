@@ -8,7 +8,7 @@ public class TrainersInCourse {
 
     private Course course;
     private List<Trainer> trainers = new ArrayList<>();
-    private static volatile int count;
+    private static int count;
 
     public TrainersInCourse() {
 

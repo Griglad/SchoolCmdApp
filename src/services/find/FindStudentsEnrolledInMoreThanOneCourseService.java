@@ -4,7 +4,6 @@ import dao.SchoolDao;
 import dao.SchoolDaoImpl;
 import model.Student;
 import utilities.Platform;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -31,7 +30,7 @@ public class FindStudentsEnrolledInMoreThanOneCourseService {
 
     }
 
-    public List<Student> getStundentsInMoreThanOneCourse() {
+    public List<Student> getStudentsInMoreThanOneCourse() {
         return studentsInMoreThanOneCourse;
     }
 }

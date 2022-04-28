@@ -1,7 +1,5 @@
 package model;
 
-import utilities.Subject;
-
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -11,7 +9,7 @@ public class Trainer {
     private String firstName;
     private String lastName;
     private List<Subject> subjects;
-    private static volatile int count;
+    private static int count;
 
     public Trainer(String afm, String firstName, String lastName, List<Subject> subjects) {
         this.afm = afm;

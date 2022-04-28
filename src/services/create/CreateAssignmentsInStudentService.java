@@ -6,7 +6,6 @@ import model.*;
 import utilities.Input;
 import utilities.InputValidator;
 import utilities.Platform;
-
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;

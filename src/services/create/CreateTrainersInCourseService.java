@@ -4,7 +4,6 @@ import dao.SchoolDao;
 import dao.SchoolDaoImpl;
 import model.*;
 import utilities.*;
-
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
