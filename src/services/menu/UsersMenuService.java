@@ -7,6 +7,7 @@ import utilities.InputValidator;
 import utilities.Style;
 import views.InputView;
 import views.SyntheticView;
+
 import java.util.Scanner;
 
 public class UsersMenuService {
@@ -29,10 +30,12 @@ public class UsersMenuService {
             synchronized (UsersMenuService.class) {
                 if (instance == null) {
                     instance = new UsersMenuService();
-                    instance.showMenu();
+
                 }
             }
+
         }
+        instance.showMenu();
         return instance;
     }
 
