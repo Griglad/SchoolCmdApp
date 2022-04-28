@@ -2,7 +2,10 @@ package services.display;
 
 import dao.SchoolDao;
 import dao.SchoolDaoImpl;
+import model.Assignment;
 import utilities.Platform;
+
+import java.util.List;
 
 public class DisplayAssignmentsService {
 
@@ -10,9 +13,10 @@ public class DisplayAssignmentsService {
 
 
     public void display(Platform platform) {
-        if (!schoolDao.getAssignments(platform).isEmpty()) {
+        List<Assignment> assignments = schoolDao.getAssignments(platform);
+        if (!assignments.isEmpty()) {
             System.out.println("--------ASSIGNMENTS-------");
-            schoolDao.getAssignments(platform).forEach(System.out::println);
+            assignments.forEach(System.out::println);
         } else {
             System.out.println("--------NO ASSIGNMENTS FOUND-------");
         }

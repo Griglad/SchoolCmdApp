@@ -97,7 +97,7 @@ public class InputValidator {
                 result = LocalDate.parse(in, format);
                 break;
             } catch (DateTimeException e) {
-                System.out.println("CAUGHT");
+
             }
         }
         return result;

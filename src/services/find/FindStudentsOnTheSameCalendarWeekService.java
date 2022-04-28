@@ -8,6 +8,7 @@ import model.Student;
 import utilities.Input;
 import utilities.InputValidator;
 import utilities.Platform;
+
 import java.time.LocalDate;
 import java.time.temporal.WeekFields;
 import java.util.*;
@@ -20,7 +21,6 @@ public class FindStudentsOnTheSameCalendarWeekService {
 
     private final SchoolDao schoolDao = new SchoolDaoImpl();
     private final Scanner input = Input.getInstance();
-    private List<Student> studentsOnTheSameCalendarWeek = new ArrayList<>();
 
     public List<Student> findStudentsOnTheSameCalendarWeek(Platform platform) {
 
@@ -41,14 +41,7 @@ public class FindStudentsOnTheSameCalendarWeekService {
                                 .anyMatch(r -> isInSameWeek(localDate, r.getSubDateTime())))
                         .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
-        studentsOnTheSameCalendarWeek = filteredMap.keySet().stream().toList();
-
-        return studentsOnTheSameCalendarWeek;
-
-    }
-
-    public List<Student> getStudentsOnTheSameCalendarWeek() {
-        return studentsOnTheSameCalendarWeek;
+        return filteredMap.keySet().stream().toList();
     }
 
     public boolean isInSameWeek(LocalDate date, LocalDate assignmentDate) {

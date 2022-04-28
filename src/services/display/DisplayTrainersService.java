@@ -2,7 +2,10 @@ package services.display;
 
 import dao.SchoolDao;
 import dao.SchoolDaoImpl;
+import model.Trainer;
 import utilities.Platform;
+
+import java.util.List;
 
 public class DisplayTrainersService {
 
@@ -10,9 +13,10 @@ public class DisplayTrainersService {
 
 
     public void display(Platform platform) {
-        if (!schoolDao.getTrainers(platform).isEmpty()) {
+        List<Trainer> trainers = schoolDao.getTrainers(platform);
+        if (!trainers.isEmpty()) {
             System.out.println("--------TRAINERS-------");
-            schoolDao.getTrainers(platform).forEach(System.out::println);
+            trainers.forEach(System.out::println);
         } else {
             System.out.println("--------NO TRAINERS FOUND-------");
         }

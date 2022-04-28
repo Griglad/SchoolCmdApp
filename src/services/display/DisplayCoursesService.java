@@ -2,7 +2,10 @@ package services.display;
 
 import dao.SchoolDao;
 import dao.SchoolDaoImpl;
+import model.Course;
 import utilities.Platform;
+
+import java.util.List;
 
 
 public class DisplayCoursesService {
@@ -11,13 +14,13 @@ public class DisplayCoursesService {
 
 
     public void display(Platform platform) {
-        if (!schoolDao.getCourses(platform).isEmpty()) {
+        List<Course> courses = schoolDao.getCourses(platform);
+        if (courses.isEmpty()) {
             System.out.println("--------COURSES-------");
-            schoolDao.getCourses(platform).forEach(System.out::println);
+            courses.forEach(System.out::println);
         } else {
             System.out.println("--------NO COURSES FOUND-------");
         }
-
     }
 
 }

@@ -2,7 +2,10 @@ package services.display;
 
 import dao.SchoolDao;
 import dao.SchoolDaoImpl;
+import model.Student;
 import utilities.Platform;
+
+import java.util.List;
 
 public class DisplayStudentsService {
 
@@ -10,7 +13,8 @@ public class DisplayStudentsService {
 
 
     public void display(Platform platform) {
-        if (!schoolDao.getStudents(platform).isEmpty()) {
+        List<Student> students = schoolDao.getStudents(platform);
+        if (!students.isEmpty()) {
             System.out.println("--------STUDENTS-------");
             schoolDao.getStudents(platform).forEach(System.out::println);
         } else {
