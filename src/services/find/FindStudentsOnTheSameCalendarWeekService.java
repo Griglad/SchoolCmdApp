@@ -25,9 +25,9 @@ public class FindStudentsOnTheSameCalendarWeekService {
     public List<Student> findStudentsOnTheSameCalendarWeek(Platform platform) {
 
         System.out.println("PLEASE PROVIDE A DATE:");
+        
         LocalDate localDate = InputValidator.provideADate(input);
-       
-
+        
         Map<Student, List<Assignment>> filteredMap =
                 schoolDao
                         .getAssignmentsInStudents(platform)
