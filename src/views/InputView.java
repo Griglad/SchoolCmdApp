@@ -20,7 +20,7 @@ public class InputView {
     }
 
 
-    public void showInputsView() {
+    public void showInputView() {
         InputMenuService.getInstance().showInputMenu();
     }
 }

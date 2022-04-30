@@ -58,7 +58,7 @@ public class UsersMainMenuService {
                 case 2 -> createAllDataService.create();
                 case 3 -> {
                     if (createAllDataService.isAllDataCreated()) {
-                        inputView.showInputsView();
+                        inputView.showInputView();
                         Style.blank();
                     } else {
                         System.out.println("YOU DIDN'T CREATE ANY DATA PLEASE PRESS 2 TO CRATE DATA");
@@ -66,7 +66,7 @@ public class UsersMainMenuService {
                     }
                 }
                 case 4 -> System.exit(0);
-                default -> inputView.showInputsView();
+                default -> showMenu();
             }
         }
     }
