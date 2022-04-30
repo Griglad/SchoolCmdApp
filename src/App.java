@@ -1,10 +1,10 @@
-import services.menu.UsersMenuService;
+import views.MainView;
 
 public class App {
 
     public static void main(String[] args) {
 
-        UsersMenuService.getInstance();
+        MainView.getInstance();
 
     }
 }

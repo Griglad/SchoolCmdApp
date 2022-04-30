@@ -10,42 +10,31 @@ import views.SyntheticView;
 
 import java.util.Scanner;
 
-public class UsersMenuService {
+public class UsersMainMenuService {
 
-
-    private static UsersMenuService instance;
+    private static UsersMainMenuService instance;
     private final InputView inputView = InputView.getInstance();
     private final SyntheticView syntheticView = SyntheticView.getInstance();
     private final Scanner input = Input.getInstance();
     private final CreateAllDataService createAllDataService = new CreateAllDataService();
 
 
-    private UsersMenuService() {
+
+    private UsersMainMenuService(){
 
     }
 
-
-    public static UsersMenuService getInstance() {
+    public static UsersMainMenuService getInstance() {
         if (instance == null) {
-            synchronized (UsersMenuService.class) {
-                if (instance == null) {
-                    instance = new UsersMenuService();
-
-                }
-            }
-
+            instance = new UsersMainMenuService();
         }
-        instance.showMenu();
         return instance;
     }
 
-
     public void showMenu() {
-
         System.out.println(("WELCOME TO REMEDIAL TEACHING APPLICATION"));
         System.out.println(("THIS APPLICATION SIMULATES A PRIVATE SCHOOL WHICH OFFERS REMEDIAL TEACHING SERVICES\n"));
         userChoice();
-
     }
 
     private void userChoice() {
@@ -65,11 +54,11 @@ public class UsersMenuService {
             correctInput = InputValidator.provideNumToInteger(input);
 
             switch (correctInput) {
-                case 1 -> syntheticView.showMenu();
+                case 1 -> syntheticView.showSyntheticView();
                 case 2 -> createAllDataService.create();
                 case 3 -> {
                     if (createAllDataService.isAllDataCreated()) {
-                        inputView.showMenu();
+                        inputView.showInputsView();
                         Style.blank();
                     } else {
                         System.out.println("YOU DIDN'T CREATE ANY DATA PLEASE PRESS 2 TO CRATE DATA");
@@ -77,10 +66,8 @@ public class UsersMenuService {
                     }
                 }
                 case 4 -> System.exit(0);
-                default -> inputView.showMenu();
+                default -> inputView.showInputsView();
             }
         }
-
     }
-
 }

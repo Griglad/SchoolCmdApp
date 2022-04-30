@@ -15,7 +15,7 @@ public class DisplayCoursesService {
 
     public void display(Platform platform) {
         List<Course> courses = schoolDao.getCourses(platform);
-        if (courses.isEmpty()) {
+        if (!courses.isEmpty()) {
             System.out.println("--------COURSES-------");
             courses.forEach(System.out::println);
         } else {
