@@ -17,10 +17,10 @@ public class CreateAllDataService {
         Course createdCourse = createCourseService.create();
         //Check if the user tries to create a specific course twice
         if (createdCourse != null) {
-            createTrainersInCourseService.create(createdCourse);
-            AssignmentsInCourse assignmentInCourse = createAssignmentsInCourseService.create(createdCourse);
-            StudentsInCourse studentsInCourse = createStudentsInCourseService.create(createdCourse);
-            createAssignmentsInStudentService.create(studentsInCourse, assignmentInCourse);
+            //createTrainersInCourseService.create(createdCourse);
+            //AssignmentsInCourse assignmentInCourse = createAssignmentsInCourseService.create(createdCourse);
+           // StudentsInCourse studentsInCourse = createStudentsInCourseService.create(createdCourse);
+           // createAssignmentsInStudentService.create(studentsInCourse, assignmentInCourse);
             isAllDataCreated = true;
         }
     }

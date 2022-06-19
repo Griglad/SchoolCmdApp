@@ -274,9 +274,7 @@ public class InputValidator {
                 System.out.println("PLEASE SELECT THE RIGHT INPUT");
             }
         }
-
         return inputTypes;
-
     }
 
 }
