@@ -1,4 +1,4 @@
-package views;
+package utilities;
 
 public class TestUtility {
 }
